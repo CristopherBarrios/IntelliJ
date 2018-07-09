@@ -1,29 +1,33 @@
 package main.utils
 
-
-
-
 class Radio (
-        private val emisora: Double,
+        var emisora: Boolean = false,
         private val color: String,
-        var isTurnedOn: Boolean = false,
+        var encendido: Boolean = false,
         private val volumen: Int
-) {
+)
+{
     fun turnOn() {
-        isTurnedOn = true
+        encendido = true
     }
 
     fun turnOff() {
-        isTurnedOn = false
+        encendido = false
+    }
+    fun turnfm(){
+        emisora = true
+    }
+    fun turnam(){
+        emisora = false
     }
 
     override fun toString(): String {
         return """
-            Car:
-                Model: $emisora
+            Radio:
+                Emisora: $emisora
                 Color: $color
-                Doors: $volumen
-                Is turned On: $isTurnedOn
+                encendido: $encendido
+                volumen: $volumen
         """.trimIndent()
     }
 }

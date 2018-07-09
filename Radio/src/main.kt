@@ -2,25 +2,29 @@ package main
 
 import main.utils.*
 
-fun enciendelosTodos (carros: ArrayList<Radio>) {
-    carros.forEach { it.turnOn() }
+fun enciendelosTodos (Rad: ArrayList<Radio>) {
+    Rad.forEach { it.turnOn() }
 }
-fun apagalosTodos (carros: ArrayList<Radio>){
-    carros.forEach { it.turnOff()}
+fun apagalosTodos (Rad: ArrayList<Radio>){
+    Rad.forEach { it.turnOff()}
+}
+fun cambiaemisora (Rad: ArrayList<Radio>){
+    Rad.forEach{ it.turnfm()}
+}
+fun cambiaemisoraam (Rad: ArrayList<Radio>){
+    Rad.forEach{ it.turnam()}
 }
 
 
 fun main(args: Array<String>) {
     val sony = Radio(
-            emisora = 90.1,
             color = "negro",
             volumen = 9
     )
 
     val samsung = Radio(
-            emisora = 80.4,
             color = "blanco",
-            volumen = 4
+            volumen = 8
     )
 
     val misRadios: ArrayList<Radio> = arrayListOf(
@@ -28,5 +32,12 @@ fun main(args: Array<String>) {
             samsung
     )
     enciendelosTodos(misRadios)
+    misRadios.forEach { println(it) }
+    apagalosTodos(misRadios)
+    misRadios.forEach { println(it) }
+    
+    cambiaemisora(misRadios)
+    misRadios.forEach { println(it) }
+    cambiaemisoraam(misRadios)
     misRadios.forEach { println(it) }
 }
