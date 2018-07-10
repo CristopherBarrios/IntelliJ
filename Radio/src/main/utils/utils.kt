@@ -4,7 +4,10 @@ class Radio (
         var emisora: Boolean = false,
         private val color: String,
         var encendido: Boolean = false,
-        private val volumen: Int
+        private val volumen: Int,
+        private val tamano: String,
+        private val anio: String,
+        private val bocinas: Int
 )
 {
     fun turnOn() {
@@ -28,6 +31,9 @@ class Radio (
                 Color: $color
                 encendido: $encendido
                 volumen: $volumen
+                tamanio: $tamano
+                anio: $anio
+                bocinas: $bocinas
         """.trimIndent()
     }
 }

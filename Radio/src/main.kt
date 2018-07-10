@@ -19,12 +19,18 @@ fun cambiaemisoraam (Rad: ArrayList<Radio>){
 fun main(args: Array<String>) {
     val sony = Radio(
             color = "negro",
-            volumen = 9
+            volumen = 9,
+            tamano = "grande",
+            anio = "2018",
+            bocinas = 2
     )
 
     val samsung = Radio(
             color = "blanco",
-            volumen = 8
+            volumen = 8,
+            tamano = "pequeno",
+            anio = "2016",
+            bocinas = 1
     )
 
     val misRadios: ArrayList<Radio> = arrayListOf(
@@ -35,7 +41,7 @@ fun main(args: Array<String>) {
     misRadios.forEach { println(it) }
     apagalosTodos(misRadios)
     misRadios.forEach { println(it) }
-    
+
     cambiaemisora(misRadios)
     misRadios.forEach { println(it) }
     cambiaemisoraam(misRadios)
